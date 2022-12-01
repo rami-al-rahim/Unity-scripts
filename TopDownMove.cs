@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Move")]
-    [SerializeField] private Rigidbody2D  rb;
+    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     private Vector2 move;
     // Start is called before the first frame update
