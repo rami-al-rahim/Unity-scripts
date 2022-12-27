@@ -22,5 +22,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        move.x = Input.GetAxisRaw("Horizontal");
+        move.y = Input.GetAxisRaw("Vertical");
     }
 }
