@@ -18,7 +18,8 @@ public class Player : MonoBehaviour
 
         Vector2 look = mouse - rb.position;
         Vector2 angle = new Vector2(mouse.x - transform.position.x, mouse.y - transform.position.y);
-        transform.right = angle;
+        //if have problems with routat replac transform.up to transform.right
+        transform.up = angle;
     }
     private void Update()
     {
