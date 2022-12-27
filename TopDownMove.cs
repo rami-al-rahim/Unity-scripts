@@ -17,10 +17,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        move.x = Input.GetAxisRaw("Horizontal");
-        move.y = Input.GetAxisRaw("Vertical");
-        move.Normalize();
-
-        rb.velocity = move * speed;
+        rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
     }
 }
