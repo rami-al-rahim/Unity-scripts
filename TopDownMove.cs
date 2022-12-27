@@ -8,15 +8,17 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     private Vector2 move;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
+    }
+    private void Update()
+    {
+        move.x = Input.GetAxisRaw("Horizontal");
+        move.y = Input.GetAxisRaw("Vertical");
     }
 }
