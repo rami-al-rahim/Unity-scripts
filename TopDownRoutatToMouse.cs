@@ -17,8 +17,8 @@ public class Player : MonoBehaviour
         rb.velocity = move * speed;
 
         Vector2 look = mouse - rb.position;
-        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        Vector2 angle = new Vector2(mouse.x - transform.position.x, mouse.y - transform.position.y);
+        transform.right = angle;
     }
     private void Update()
     {
