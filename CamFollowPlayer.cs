@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [HelpURL("https://www.youtube.com/watch?v=Sao0j1XNcvM")]
