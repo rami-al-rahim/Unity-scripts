@@ -2,13 +2,10 @@ using UnityEngine;
 
 public class GetAdsId : MonoBehaviour
 {
-    [SerializeField] private Transform target;
-    [SerializeField] private Vector3 offset;
-    [SerializeField] private float damping;
-    private Vector3 velocity;
+string adsid;
      private void Start()
     {
-        string adsid = GetAndroidAdvertiserId();
+         adsid = GetAndroidAdvertiserId();
 
         if (!string.IsNullOrEmpty(adsid))
         {
